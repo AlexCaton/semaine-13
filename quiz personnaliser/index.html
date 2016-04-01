@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr" ng-app="myApp">
+  <head>
+    <title>Quiz de personnalité</title>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <link rel="stylesheet" href="css/master.css">
+  </head>
+  <body>
+    <form name="myForm" ng-controller="quizDePersonnalite">
+      <div class="boxQuestion" ng-repeat="question in questions">
+        <label><h4>{{question.question}}</h4></label>
+        <label for="reponse1{{$index + 1}}"><input id="reponse1{{$index + 1}}" type="radio" name="rep{{$index + 1}}" value="reponse1">{{question.reponse1}}</label><br>
+        <label for="reponse2{{$index + 1}}"><input id="reponse2{{$index + 1}}" type="radio" name="rep{{$index + 1}}" value="reponse2">{{question.reponse2}}</label><br>
+        <label for="reponse3{{$index + 1}}"><input id="reponse3{{$index + 1}}" type="radio" name="rep{{$index + 1}}" value="reponse3">{{question.reponse3}}</label><br>
+      </div>
+      <br>
+      <button class="bouton" type="button" name="button" ng-click ="calcule()">Calculer !</button>
+   </form>
+
+    <script type="text/javascript">
+      var app = angular.module('myApp', []);
+
+      app.controller('quizDePersonnalite', ['$scope', function($scope) {
+        $scope.categories = [
+          {
+            "name" : "Dev Front-end",
+            "description" : "",
+            "score" : "0"
+          },
+          {
+            "name" : "Dev Black-end",
+            "description" : "",
+            "score" : "0"
+          },
+          {
+            "name" : "C'est quoi le developpement web ?",
+            "description" : "",
+            "score" : "0"
+          }
+        ];
+        $scope.questions = [
+          {
+            "question" : "Aimez-vous le HTML ?",
+            "reponse1" : "J'adore <3 ",
+            "reponse2" : "Oui",
+            "reponse3" : "C'est quoi HTML ?"
+          },
+          {
+            "question" : "Aimez-vous CSS3 ?",
+            "reponse1" : "J'adore <3 ",
+            "reponse2" : "Oui",
+            "reponse3" : "C'est quoi CSS3 ? "
+          },
+          {
+            "question" : "Aimez-vous Javascript ?",
+            "reponse1" : "J'adore <3 ",
+            "reponse2" : "Oui",
+            "reponse3" : "C'est quoi Javascript ? "
+          },
+          {
+            "question" : "Aimez-vous Angularjs ?",
+            "reponse1" : "J'adore <3 ",
+            "reponse2" : "Oui",
+            "reponse3" : "C'est quoi Angularjs ? "
+          },
+          {
+            "question" : "Aimez-vous Ruby ?",
+            "reponse1" : "J'adore <3 ",
+            "reponse2" : "Oui",
+            "reponse3" : "C'est quoi Ruby ? "
+          },
+          {
+            "question" : "Aimez-vous PHP ?",
+            "reponse1" : "J'adore <3 ",
+            "reponse2" : "Oui",
+            "reponse3" : "C'est quoi PHP ? "
+          },
+          {
+            "question" : "Aimez-vous GIT ?",
+            "reponse1" : "J'adore <3 ",
+            "reponse2" : "Oui",
+            "reponse3" : "C'est quoi GIT ? "
+          }
+        ];
+        $scope.calcule = function() {
+
+        };
+      }]);
+    </script>
+    <!--<script src="js.app.js"></script>-->
+  </body>
+</html>

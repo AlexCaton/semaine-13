@@ -1,0 +1,25 @@
+body {
+  margin: auto;
+  padding: 0;
+
+  background-color: #2d2d2d;
+}
+.boxQuestion {
+  position: relative;
+  left: 27px;
+  width: 250px;
+
+  font-size: 17px;
+  font-family: 'Aria', sans-serif;
+  color: #f7f7f7;
+}
+.bouton {
+  position: relative;
+  top : 21px;
+  left: 27px;
+
+  background-color: #f7f7f7;
+
+  font-size: 1.2em;
+  color: #2d2d2d;
+}
